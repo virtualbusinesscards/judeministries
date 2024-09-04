@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evangelist Business Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            margin: 0;
+        }
+        .card {
+            width: 500px;
+            height: 320px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 30px;
+            box-sizing: border-box;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            color: #fff; /* Adjust text color for contrast */
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('image/BG2.jpg') no-repeat center center;
+            background-size: cover;
+            opacity: 0.9; /* Adjust opacity to make the background image transparent */
+            z-index: -1; /* Place the background behind the content */
+        }
+        .card svg {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            height: 80px;
+        }
+        .card svg text {
+            font-size: 24px;
+            fill: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 3.5); /* Adding shadow to the curved title */
+        }
+        .card .name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 100px;
+        }
+        .card .title {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .card .contact-info {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .card .contact-info a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .card .contact-info i {
+            margin-right: 10px;
+        }
+
+        }
+        .save-contact {
+            text-align: center;
+            margin-top: 5px;
+        }
+        .save-contact a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .save-contact a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <svg viewBox="0 0 500 80">
+            <path id="curve" d="M 50 80 Q 250 0 450 80" fill="transparent"/>
+            <text width="500">
+                <textPath href="#curve" startOffset="50%" text-anchor="middle">JUDE AKIYJIKA MINISTRIES</textPath>
+            </text>
+        </svg>
+        <div class="name">Evangelist Jude</div>
+        <div class="title">Spreading the Word of God</div>
+        <div class="contact-info">
+            <a href="mailto:evangelist_jude@yahoo.com"><i class="fas fa-envelope"></i>evangelist_jude@yahoo.com</a>
+            <a href="tel:3024764325"><i class="fas fa-phone"></i>302-476-4325</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i>260 Christiana Rd, New Castle De , 19720</a>
+        </div>
+        <div class="save-contact">
+            <a href="Jesusboy.vcf" download="Jesusboy.vcf"><i class="fas fa-address-card"></i> Save Contact</a>
+        </div>
+    </div>
+</body>
+</html>
